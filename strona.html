@@ -8,8 +8,8 @@
         body {
             font-family: 'Arial', sans-serif;
             text-align: center;
-            background-color: #f4f4f4;
             margin: 20px;
+            transition: background-color 0.3s ease; /* Dodany efekt przejścia przy zmianie tła */
         }
 
         h2 {
@@ -27,10 +27,41 @@
             border: 1px solid #ddd;
             padding: 10px;
             text-align: center;
+            cursor: pointer;
         }
 
         th {
             background-color: #f2f2f2;
+        }
+
+        /* Dodany styl dla przycisku */
+        .toggle-btn {
+            margin-top: 10px;
+            padding: 8px 16px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+        }
+
+        /* Dodane style dla ciemnego motywu */
+        body.dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+
+        table.dark-mode {
+            background-color: #444;
+        }
+
+        th.dark-mode {
+            background-color: #666;
+        }
+
+        .toggle-btn.dark-mode {
+            background-color: #008CBA;
         }
     </style>
 </head>
@@ -38,30 +69,42 @@
 
     <h2>Kalendarz Roczny</h2>
 
+    <!-- Przycisk do przełączania między jasnym i ciemnym motywem -->
+    <button onclick="toggleDarkMode()" class="toggle-btn">Przełącz Motyw</button>
+
     <table>
         <thead>
             <tr>
-                <th>Styczeń</th>
-                <th>Luty</th>
-                <th>Marzec</th>
-                <th>Kwiecień</th>
-                <th>Maj</th>
-                <th>Czerwiec</th>
-                <th>Lipiec</th>
-                <th>Sierpień</th>
-                <th>Wrzesień</th>
-                <th>Październik</th>
-                <th>Listopad</th>
-                <th>Grudzień</th>
+                <th><a href="styczen.html">Styczeń</a></th>
+                <th><a href="luty.html">Luty</a></th>
+                <th><a href="marzec.html">Marzec</a></th>
+                <th><a href="kwiecien.html">Kwiecień</a></th>
+                <th><a href="maj.html">Maj</a></th>
+                <th><a href="czerwiec.html">Czerwiec</a></th>
+                <th><a href="lipiec.html">Lipiec</a></th>
+                <th><a href="sierpien.html">Sierpień</a></th>
+                <th><a href="wrzesien.html">Wrzesień</a></th>
+                <th><a href="pazdziernik.html">Październik</a></th>
+                <th><a href="listopad.html">Listopad</a></th>
+                <th><a href="grudzien.html">Grudzień</a></th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td>
+                <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td>
             </tr>
-            <!-- ... (powtórz dla każdego tygodnia w każdym miesiącu) ... -->
+            <!-- Powtórz to dla każdego miesiąca, dostosowując liczbę dni zgodnie z rzeczywistym kalendarzem -->
+            <!-- Na przykład, luty ma 28 lub 29 dni, marzec ma 31 dni, itd. -->
         </tbody>
     </table>
+
+    <script>
+        // Funkcja do przełączania między jasnym i ciemnym motywem
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+            document.querySelector("table").classList.toggle("dark-mode");
+        }
+    </script>
 
 </body>
 </html>
