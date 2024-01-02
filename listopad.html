@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalendarz - listopad</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: #fff;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Kalendarz - Styczeń</h2>
+
+    <table id="calendar">
+        <thead>
+            <tr>
+                <th>Pon</th>
+                <th>Wt</th>
+                <th>Śr</th>
+                <th>Czw</th>
+                <th>Pt</th>
+                <th>Sob</th>
+                <th>Nd</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Początkowy dzień miesiąca, np. dla stycznia 2024 to poniedziałek, więc pierwsze puste komórki na niedzielę -->
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td><span class="day" data-day="1">1</span></td><td><span class="day" data-day="2">2</span></td>
+            </tr>
+            <!-- Kontynuacja dla kolejnych dni stycznia -->
+            <!-- Dostosuj liczbę dni i układ dni tygodnia dla rzeczywistego kalendarza -->
+            <tr>
+                <td><span class="day" data-day="3">3</span></td><td><span class="day" data-day="4">4</span></td><td><span class="day" data-day="5">5</span></td><td><span class="day" data-day="6">6</span></td><td><span class="day" data-day="7">7</span></td><td><span class="day" data-day="8">8</span></td><td><span class="day" data-day="9">9</span></td>
+            </tr>
+            <tr>
+                <td><span class="day" data-day="10">10</span></td><td><span class="day" data-day="11">11</span></td><td><span class="day" data-day="12">12</span></td><td><span class="day" data-day="13">13</span></td><td><span class="day" data-day="14">14</span></td><td><span class="day" data-day="15">15</span></td><td><span class="day" data-day="16">16</span></td>
+            </tr>
+            <tr>
+                <td><span class="day" data-day="17">17</span></td><td><span class="day" data-day="18">18</span></td><td><span class="day" data-day="19">19</span></td><td><span class="day" data-day="20">20</span></td><td><span class="day" data-day="21">21</span></td><td><span class="day" data-day="22">22</span></td><td><span class="day" data-day="23">23</span></td>
+            </tr>
+            <tr>
+                <td><span class="day" data-day="24">24</span></td><td><span class="day" data-day="25">25</span></td><td><span class="day" data-day="26">26</span></td><td><span class="day" data-day="27">27</span></td><td><span class="day" data-day="28">28</span></td><td><span class="day" data-day="29">29</span></td><td><span class="day" data-day="30">30</span></td>
+            </tr>
+            <tr>
+                <td><span class="day" data-day="31">31</span></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
