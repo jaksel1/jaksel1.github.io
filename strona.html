@@ -13,7 +13,7 @@
         }
 
         h2 {
-            color: #fff; /* Zmieniony kolor napisu na biały */
+            color: #000; /* Zmieniony kolor napisu na czarny */
         }
 
         table {
@@ -63,6 +63,25 @@
         .toggle-btn.dark-mode {
             background-color: #008CBA;
         }
+
+        /* Dodane style dla jasnego motywu */
+        body.light-mode {
+            background-color: #fff;
+            color: #000;
+        }
+
+        table.light-mode {
+            background-color: #fff;
+        }
+
+        th.light-mode {
+            background-color: #f2f2f2;
+        }
+
+        .toggle-btn.light-mode {
+            background-color: #4CAF50;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -70,7 +89,7 @@
     <h2>Kalendarz Roczny</h2>
 
     <!-- Przycisk do przełączania między jasnym i ciemnym motywem -->
-    <button onclick="toggleDarkMode()" class="toggle-btn">Przełącz Motyw</button>
+    <button onclick="toggleMode()" class="toggle-btn">Przełącz Motyw</button>
 
     <table>
         <thead>
@@ -100,9 +119,11 @@
 
     <script>
         // Funkcja do przełączania między jasnym i ciemnym motywem
-        function toggleDarkMode() {
+        function toggleMode() {
             document.body.classList.toggle("dark-mode");
+            document.body.classList.toggle("light-mode");
             document.querySelector("table").classList.toggle("dark-mode");
+            document.querySelector("table").classList.toggle("light-mode");
         }
     </script>
 
