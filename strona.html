@@ -1,131 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalendarz Roczny</title>
+    <meta charset="utf-8">
+    <title>Kalendarz 2024</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            text-align: center;
-            margin: 20px;
-            transition: background-color 0.3s ease; /* Dodany efekt przejścia przy zmianie tła */
-        }
-
-        h2 {
-            color: #000; /* Zmieniony kolor napisu na czarny */
-        }
-
+        /* Stylizacja kalendarza */
         table {
-            width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
-            background-color: #fff;
+            width: 100%;
         }
-
         th, td {
             border: 1px solid #ddd;
-            padding: 10px;
+            padding: 8px;
             text-align: center;
-            cursor: pointer;
         }
-
         th {
             background-color: #f2f2f2;
-        }
-
-        /* Dodany styl dla przycisku */
-        .toggle-btn {
-            margin-top: 10px;
-            padding: 8px 16px;
-            font-size: 16px;
-            cursor: pointer;
-            background-color: #4CAF50;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-        }
-
-        /* Dodane style dla ciemnego motywu */
-        body.dark-mode {
-            background-color: #333;
-            color: #fff;
-        }
-
-        table.dark-mode {
-            background-color: #444;
-        }
-
-        th.dark-mode {
-            background-color: #666;
-        }
-
-        .toggle-btn.dark-mode {
-            background-color: #008CBA;
-        }
-
-        /* Dodane style dla jasnego motywu */
-        body.light-mode {
-            background-color: #fff;
-            color: #000;
-        }
-
-        table.light-mode {
-            background-color: #fff;
-        }
-
-        th.light-mode {
-            background-color: #f2f2f2;
-        }
-
-        .toggle-btn.light-mode {
-            background-color: #4CAF50;
-            color: #fff;
         }
     </style>
 </head>
 <body>
-
-    <h2>Kalendarz Roczny</h2>
-
-    <!-- Przycisk do przełączania między jasnym i ciemnym motywem -->
-    <button onclick="toggleMode()" class="toggle-btn">Przełącz Motyw</button>
-
+    <h1>Kalendarz 2024</h1>
     <table>
-        <thead>
-            <tr>
-                <th><a href="styczen.html">Styczeń</a></th>
-                <th><a href="luty.html">Luty</a></th>
-                <th><a href="marzec.html">Marzec</a></th>
-                <th><a href="kwiecien.html">Kwiecień</a></th>
-                <th><a href="maj.html">Maj</a></th>
-                <th><a href="czerwiec.html">Czerwiec</a></th>
-                <th><a href="lipiec.html">Lipiec</a></th>
-                <th><a href="sierpien.html">Sierpień</a></th>
-                <th><a href="wrzesien.html">Wrzesień</a></th>
-                <th><a href="pazdziernik.html">Październik</a></th>
-                <th><a href="listopad.html">Listopad</a></th>
-                <th><a href="grudzien.html">Grudzień</a></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td>
-            </tr>
-            <!-- Powtórz to dla każdego miesiąca, dostosowując liczbę dni zgodnie z rzeczywistym kalendarzem -->
-            <!-- Na przykład, luty ma 28 lub 29 dni, marzec ma 31 dni, itd. -->
-        </tbody>
+        <tr>
+            <th>Miesiąc</th>
+            <th>Poniedziałek</th>
+            <th>Wtorek</th>
+            <th>Środa</th>
+            <th>Czwartek</th>
+            <th>Piątek</th>
+            <th>Sobota</th>
+            <th>Niedziela</th>
+        </tr>
+        <!-- Tutaj wstaw odpowiednie dni dla każdego miesiąca -->
+        <!-- Przykład: -->
+        <tr>
+            <td>Styczeń</td>
+            <td>1</td>
+            <td>2</td>
+            <!-- ... -->
+            <td>29</td>
+            <td>30</td>
+            <td>31</td>
+        </tr>
+        <!-- ... -->
     </table>
-
-    <script>
-        // Funkcja do przełączania między jasnym i ciemnym motywem
-        function toggleMode() {
-            document.body.classList.toggle("dark-mode");
-            document.body.classList.toggle("light-mode");
-            document.querySelector("table").classList.toggle("dark-mode");
-            document.querySelector("table").classList.toggle("light-mode");
-        }
-    </script>
-
 </body>
 </html>
